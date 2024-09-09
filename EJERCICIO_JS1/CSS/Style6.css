@@ -1,0 +1,119 @@
+/* Reset de márgenes y rellenos para todos los elementos */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* Estilo para el cuerpo de la página */
+body {
+    height: 58vh; /* Altura del 58% del viewport */
+    background: #e1a592; /* Color de fondo */
+    display: flex; /* Usa Flexbox para centrar el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+/* Estilo para el contenedor principal del juego */
+.contenedor {
+    width: 100%; /* Ancho del 100% del contenedor padre */
+    height: 280px; /* Altura fija */
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    position: relative; /* Posicionamiento relativo para contener elementos hijos absolutos */
+    background: linear-gradient(#77bb9a, transparent) #ffe2d1; /* Degradado de fondo y color sólido */
+    transition: background-color 1s linear; /* Transición suave del color de fondo */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde del contenedor */
+}
+
+/* Estilo para el dinosaurio */
+.dino {
+    width: 84px; /* Ancho del dinosaurio */
+    height: 84px; /* Altura del dinosaurio */
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    bottom: 22px; /* Distancia desde el fondo del contenedor */
+    left: 42px; /* Distancia desde el lado izquierdo del contenedor */
+    z-index: 2; /* Asegura que el dinosaurio esté encima de otros elementos */
+    background: url(../img/dino.png) repeat-x 0px 0px; /* Imagen de fondo repetida horizontalmente */
+}
+
+/* Animación para el dinosaurio en movimiento */
+.dino-corriendo {
+    animation: animarDino 0.25s steps(2) infinite; /* Animación que cambia la posición del fondo */
+}
+
+/* Estilo para el dinosaurio cuando está estrellado */
+.dino-estrellado {
+    background-position-x: -252px; /* Cambia la posición del fondo para el estado estrellado */
+}
+
+/* Estilo para el suelo del juego */
+.suelo {
+    width: 200%; /* Ancho del 200% para cubrir el contenedor */
+    height: 42px; /* Altura del suelo */
+    position: absolute; /* Posicionamiento absoluto en el fondo del contenedor */
+    bottom: 0; /* Distancia desde el fondo del contenedor */
+    left: 0; /* Distancia desde el lado izquierdo del contenedor */
+    background: url(../img/suelo.png) repeat-x 0px 0px; /* Imagen de fondo repetida horizontalmente */
+}
+
+/* Estilo para el cactus */
+.cactus {
+    width: 40px; /* Ancho del cactus */
+    height: 90px; /* Altura del cactus */
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    bottom: 16px; /* Distancia desde el fondo del contenedor */
+    left: 600px; /* Distancia desde el lado izquierdo del contenedor */
+    z-index: 1; /* Asegura que el cactus esté debajo del dinosaurio */
+    background: url(../img/cactus1.png) no-repeat; /* Imagen de fondo sin repetición */
+}
+
+/* Estilo para el segundo tipo de cactus */
+.cactus2 {
+    width: 90px; /* Ancho del segundo cactus */
+    height: 60px; /* Altura del segundo cactus */
+    background: url(../img/cactus2.png) no-repeat; /* Imagen de fondo sin repetición */
+}
+
+/* Estilo para la nube */
+.nube {
+    width: 120px; /* Ancho de la nube */
+    height: 20px; /* Altura de la nube */
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    z-index: 0; /* Asegura que la nube esté en el fondo */
+    background: url(../img/nube.png) no-repeat; /* Imagen de fondo sin repetición */
+}
+
+/* Estilo para el puntaje */
+.score {
+    width: 90px; /* Ancho del área de puntaje */
+    height: 20px; /* Altura del área de puntaje */
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    top: 5px; /* Distancia desde la parte superior del contenedor */
+    right: 15px; /* Distancia desde el lado derecho del contenedor */
+    z-index: 10; /* Asegura que el puntaje esté encima de otros elementos */
+    color: #000000; /* Color del texto */
+    font-family: Arial, Helvetica, sans-serif; /* Familia de fuente */
+    font-size: 40px; /* Tamaño de fuente */
+    font-weight: bold; /* Peso de la fuente */
+    text-align: right; /* Alineación del texto a la derecha */
+}
+
+/* Estilo para el mensaje de "Game Over" */
+.game-over {
+    display: none; /* Oculta el mensaje por defecto */
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    width: 100%; /* Ancho del 100% del contenedor */
+    text-align: center; /* Alineación del texto al centro */
+    color: #000000; /* Color del texto */
+    font-size: 30px; /* Tamaño de fuente */
+    font-family: Arial, Helvetica, sans-serif; /* Familia de fuente */
+    font-weight: 600; /* Peso de la fuente */
+}
+
+/* Animación para el dinosaurio */
+@keyframes animarDino {
+    from {
+        background-position-x: -84px; /* Posición inicial del fondo */
+    }
+    to {
+        background-position-x: -252px; /* Posición final del fondo */
+    }
+}

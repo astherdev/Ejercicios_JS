@@ -1,0 +1,14 @@
+#cajaSlide {
+    display: block;
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#cajaSlide IMG {
+    max-width: 800px;
+    border: 10px solid black;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px black;
+    cursor: pointer;
+}

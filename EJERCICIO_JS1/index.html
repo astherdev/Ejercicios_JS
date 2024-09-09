@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- informacion del autor -->
+    <meta name="author" content="Raúl Caro Pastorino" />
+</head>
+
+<!-- Sección de JavaScript-->
+<script>
+    function viajarConSuerte() {
+        // numero aleatorio entre 0 y 10
+        var x = Math.random() * 10;
+        var URL;
+
+        // Si es menor o igual a 3 vamos a hotmail
+        if (x <= 3) {
+            x = 0;
+            URL = 'https://www.hotmail.com/';
+        } 
+        // Si es menor o igual a 6 vamos a Gmail
+        else if (x <= 6) {
+            x = 1;
+            URL = 'https://www.gmail.com/';
+        } 
+        // Si el número es mayor que 6 vamos a yahoo
+        else {
+            x = 2;
+            URL = 'https://www.yahoo.com/';
+        }
+
+        // vamos a la url
+        location.assign(URL);
+    }
+</script>
+
+<body>
+    <!-- Título de la página -->
+    <h1 id="titulo1">URL Aleatoria</h1>
+
+    <!-- Al hacer click, activamos la funcion viajarconsuerte -->
+    <div>
+        <a href="javascript:viajarConSuerte();" title="Viajando con suerte">Pulsa aquí para probar suerte</a>
+    </div>
+</body>
+</html>

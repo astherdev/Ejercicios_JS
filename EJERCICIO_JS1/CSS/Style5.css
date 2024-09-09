@@ -1,0 +1,31 @@
+/* Estilo para el cuerpo de la página */
+body {
+    display: flex; /* Usa Flexbox para organizar el contenido */
+    flex-direction: column; /* Organiza los elementos en una columna */
+    justify-content: center; /* Centra los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    height: 100vh; /* Altura del viewport completo */
+    background-color: #f0f0f0; /* Color de fondo de la página */
+    margin: 0; /* Elimina los márgenes predeterminados */
+}
+
+/* Estilo para el contenedor del semáforo */
+.semafo {
+    display: flex; /* Usa Flexbox para organizar los círculos */
+    background-color: black; /* Color de fondo del semáforo */
+    width: 24%; /* Ancho del contenedor del semáforo, 24% del ancho del contenedor padre */
+    margin: 10px; /* Márgenes alrededor del contenedor del semáforo */
+    border-radius: 10px; /* Bordes redondeados */
+    gap: 10px; /* Espacio entre los elementos hijos del contenedor */
+    padding: 30px 0; /* Espaciado interno en la parte superior e inferior */
+    padding-left: 15px; /* Espaciado interno a la izquierda */
+}
+
+/* Estilo para los círculos dentro del semáforo */
+.circulo {
+    width: 70px; /* Ancho del círculo */
+    height: 70px; /* Altura del círculo */
+    background-color: #fff; /* Color de fondo del círculo (blanco) */
+    border-radius: 50%; /* Bordes completamente redondeados para hacer el círculo */
+    margin: 15px 0; /* Márgenes superior e inferior del círculo */
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Pase de Imágenes Automático</title>
+    <link rel="stylesheet" href="./CSS/Style1.css">
+</head>
+    <!-- El evento 'onload' llama a iniciar cuando cargue la pagina-->
+<body onload="iniciar();">
+    <!-- Título principal de la página -->
+    <h1 id="titulo1">Pase de Imágenes Automático</h1>
+
+    <div id="cajaSlide">
+        <!-- Contenedor de imagenes -->
+        <img id="imgSlide" src="./images/img1.jpg" title="Imagen" alt="Imagen" onclick="rotarImagenes();" />
+        <!-- Imagen que rota automaticamente desde la imagen numero 1 -->
+        <br /><br />
+        <!-- salto de linea -->
+
+        <form>
+            <!-- Formulario -->
+            <!-- boton para parar las imagenes -->
+            <input type="button" value="Parar" onclick="detener();" />
+            <!-- boton para continuar con las imagenes -->
+            <input type="button" value="Continuar" onclick="iniciar();" />
+        </form>
+    </div>
+
+    <!-- Enlace al js -->
+    <script src="./js/Script1.js"></script>
+</body>
+</html>
